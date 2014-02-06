@@ -5,11 +5,11 @@ package edu.macalester.comp124.life;
  *
  * @author Michael Ekstrand <ekstrand@cs.umn.edu>
  */
-public class Conway implements RuleSet {
+public class HighLife implements RuleSet {
 
     public String getName() {
 
-        return "Conway's Rules";
+        return "HighLife";
     }
 
     /**
@@ -22,7 +22,7 @@ public class Conway implements RuleSet {
     public boolean applyRules(boolean isAlive, int neighborCount) {
 
         if (isAlive) {
-            if (neighborCount >1 && neighborCount < 4 ) {
+            if (neighborCount == 2 || neighborCount == 3 ) {
                 return true;
             }
             else {
@@ -30,7 +30,7 @@ public class Conway implements RuleSet {
             }
         }
         else {
-            if (neighborCount ==3 ) {
+            if (neighborCount == 3 || neighborCount == 6 ) {
                 return true;
             }
             else {
