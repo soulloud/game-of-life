@@ -102,7 +102,6 @@ public class LifeComponent extends JComponent {
         for (int y = 0; y < bh; y += CELL_SIZE + GUTTER_SIZE) {
             g2.fillRect(0, y, bw, GUTTER_SIZE);
         }
-        
         g2.setPaint(Color.BLUE);
         
         for (int x = 0; x < board.getWidth(); x++) {

@@ -55,9 +55,12 @@ public class HighLifeTest {
      */
     @Test
     public void testStayDead() {
+        assertFalse(rules.applyRules(false, 0));
+        assertFalse(rules.applyRules(false, 1));
         assertFalse(rules.applyRules(false, 2));
         assertFalse(rules.applyRules(false, 4));
         assertFalse(rules.applyRules(false, 5));
+        assertFalse(rules.applyRules(false, 7));
         assertFalse(rules.applyRules(false, 8));
     }
     
@@ -93,6 +96,9 @@ public class HighLifeTest {
     @Test
     public void testOvercrowd() {
         assertFalse(rules.applyRules(true, 4));
+        assertFalse(rules.applyRules(true, 5));
+        assertFalse(rules.applyRules(true, 6));
         assertFalse(rules.applyRules(true, 7));
+        assertFalse(rules.applyRules(true, 8));
     }
 }
